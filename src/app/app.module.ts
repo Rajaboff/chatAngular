@@ -10,6 +10,11 @@ import { ChatRoomsComponent } from './components/chat-rooms/chat-rooms.component
 import { ChatComponent } from './components/chat/chat.component';
 import { ChatSidebarComponent } from './components/chat-sidebar/chat-sidebar.component';
 
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { MenuComponent } from './components/menu/menu.component';
+import { ImageMaskComponent } from './components/image-mask/image-mask.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +23,15 @@ import { ChatSidebarComponent } from './components/chat-sidebar/chat-sidebar.com
     ChatRoomsComponent,
     ChatComponent,
     ChatSidebarComponent,
+    MenuComponent,
+    ImageMaskComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

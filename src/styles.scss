@@ -33,12 +33,13 @@ $chat-front-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($chat-front-theme);
 @import '~material-design-icons/iconfont/material-icons.css';
+@import './app/utils/colors.scss';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.1s all;
+  transition: background-color 0.1s;
 }
 
 html, body {
@@ -46,5 +47,5 @@ html, body {
   height: 100%;
 }
 
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

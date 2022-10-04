@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { IBar } from 'src/app/interfaces/bars.interface';
 
@@ -10,15 +11,31 @@ export class SidebarComponent implements OnInit {
 
   bars: IBar[] = [
     {
-      icon: '',
-      label: '',
+      icon: 'question_answer',
+      label: 'Все чаты',
       active: true
     },
+    {
+      icon: 'question_answer',
+      label: 'Все чаты',
+      active: false
+    },
+    {
+      icon: 'question_answer',
+      label: 'Все чаты',
+      active: false
+    },
   ]
+
+  menuIsOpen: boolean = true
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.bars, event.previousIndex, event.currentIndex);
   }
 
 }
