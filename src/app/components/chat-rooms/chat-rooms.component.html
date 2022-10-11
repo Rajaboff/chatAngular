@@ -1,2 +1,7 @@
 <div class="chat-rooms-block">
+  <app-room *ngFor="let room of roomList | async"
+  [initials]="room.room" [room]="room"
+  (click)="selectRoom(room)"
+  [active]="activeRoom?.uid === room.uid"
+  ></app-room>
 </div>

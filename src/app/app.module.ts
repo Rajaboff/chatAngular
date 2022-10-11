@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ImageMaskComponent } from './components/image-mask/image-mask.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { StoreModule } from '@ngrx/store';
+import { RoomComponent } from './components/room/room.component';
+import { InitialPipe } from './pipes/initial.pipe';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { StoreModule } from '@ngrx/store';
     ChatSidebarComponent,
     MenuComponent,
     ImageMaskComponent,
+    RoomComponent,
+    InitialPipe,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,8 @@ import { StoreModule } from '@ngrx/store';
     BrowserAnimationsModule,
     DragDropModule,
     MatSlideToggleModule,
-    StoreModule.forRoot({})
+    StoreModule.forRoot({}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

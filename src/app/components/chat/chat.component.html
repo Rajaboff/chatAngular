@@ -1,1 +1,3 @@
-<div class="chat-block"></div>
+<div class="chat-block">
+  <app-message *ngFor="let message of messages | async"></app-message>
+</div>
