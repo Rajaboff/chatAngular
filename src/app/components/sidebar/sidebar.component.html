@@ -1,5 +1,5 @@
 <div class="sidebar-block">
-  <div class="bar menu-bar" (click)="menuIsOpen = true">
+  <div class="bar menu-bar" (click)="menuIsOpen = true; menuClass = 'opened'">
     <span class="material-icons">menu</span>
   </div>
 
@@ -16,8 +16,8 @@
   </div>
 </div>
 
-<div class="menu" [ngClass]="{'active': menuIsOpen}">
+<div class="menu" [class]="menuClass">
   <app-menu></app-menu>
 </div>
 
-<div class="bg" (click)="menuIsOpen = false" [ngClass]="{'active': menuIsOpen}"></div>
+<div class="bg" (click)="menuIsOpen = false; menuClass = 'closed'" [ngClass]="{'active': menuIsOpen}"></div>

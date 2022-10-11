@@ -91,12 +91,16 @@
 .menu {
   position: absolute;
   top: 0;
+  left: -320px;
   height: 100%;
   z-index: 10;
-  animation: MenuClose 0.2s ease-in-out forwards;
 
-  &.active {
-    animation: MenuOpen 0.2s ease-in-out forwards;
+  &.opened {
+    animation: MenuOpen 0.15s ease-in-out forwards;
+  }
+
+  &.closed {
+    animation: MenuClose 0.15s ease-in-out forwards;
   }
 }
 

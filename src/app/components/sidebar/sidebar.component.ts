@@ -27,7 +27,8 @@ export class SidebarComponent implements OnInit {
     },
   ]
 
-  menuIsOpen: boolean = true
+  menuIsOpen: boolean = false;
+  menuClass: string = '';
 
   constructor() { }
 

@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-chat-rooms',
   templateUrl: './chat-rooms.component.html',
-  styleUrls: ['./chat-rooms.component.scss']
+  styleUrls: ['./chat-rooms.component.scss'],
 })
 export class ChatRoomsComponent implements OnInit {
 
-  constructor() { }
+  count$!: Observable<number>;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
+  ngOnInit(): void {}
 }
