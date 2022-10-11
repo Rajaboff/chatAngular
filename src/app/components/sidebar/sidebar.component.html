@@ -1,5 +1,23 @@
 <div class="sidebar-block">
-  <div class="bar menu">
+  <div class="bar menu-bar" (click)="menuIsOpen = true; menuClass = 'opened'">
     <span class="material-icons">menu</span>
   </div>
+
+  <div class="bars" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div class="bar" cdkDrag cdkDragLockAxis="y" cdkDragBoundary=".bars" *ngFor="let bar of bars" [ngClass]="{'active': bar.active}">
+      <span class="material-icons">{{ bar.icon }}</span>
+      <p class="label">{{ bar.label }}</p>
+    </div>
+  </div>
+
+  <div class="bar setting-bar">
+    <span class="material-icons">tune</span>
+    <p class="label">Ред.</p>
+  </div>
 </div>
+
+<div class="menu" [class]="menuClass">
+  <app-menu></app-menu>
+</div>
+
+<div class="bg" (click)="menuIsOpen = false; menuClass = 'closed'" [ngClass]="{'active': menuIsOpen}"></div>

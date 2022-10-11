@@ -1,0 +1,19 @@
+<div class="menu-block">
+  <div class="user">
+    <app-image-mask></app-image-mask>
+    <h1>Manuchehr Rajabov</h1>
+    <p>Установить эмодзи-статус</p>
+  </div>
+
+  <div class="navigations">
+    <div class="navigation" *ngFor="let navigation of navigations" (click)="navigation.active = !navigation.active">
+      <div class="icon" [ngStyle]="{'background-color': navigation.color}">
+        <span class="material-icons">{{ navigation.icon }}</span>
+      </div>
+      <p>
+        {{ navigation.label }}
+        <mat-slide-toggle color="warn" [checked]="navigation.active" *ngIf="navigation.toggle"></mat-slide-toggle>
+      </p>
+    </div>
+  </div>
+</div>

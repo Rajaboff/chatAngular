@@ -1,0 +1,83 @@
+@import "../../utils/colors.scss";
+
+.menu-block {
+  width: 320px;
+  height: 100%;
+  background-color: $dark-200;
+}
+
+.user {
+  padding: 24px;
+
+  > h1 {
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+    margin-top: 24px;
+  }
+
+  > p {
+    font-size: 13px;
+    color: $primary-color;
+    font-weight: 300;
+    margin-top: 5px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.navigations {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+
+  > .navigation {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 24px;
+    cursor: pointer;
+
+    > .icon {
+      min-width: 28px;
+      min-height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > span {
+        font-size: 16px;
+        color: white;
+      }
+    }
+
+    > p {
+      font-size: 13px;
+      font-weight: 400;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      mat-slide-toggle {
+        transform-origin: top right;
+        transform: scale(0.9) translateY(1px);
+        pointer-events: none;
+      }
+    }
+
+    &:hover {
+      background-color: #f2a75112;
+    }
+
+    &:active {
+      background-color: #f2a7510d;
+    }
+  }
+}
