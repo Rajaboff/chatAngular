@@ -37,7 +37,7 @@ export class ChatRoomsComponent implements OnInit {
   }
 
   roomIsSerching(title: string): boolean {
-    return this.searchingValue ? title.includes(this.searchingValue) : true;
+    return this.searchingValue ? title.toLowerCase().includes(this.searchingValue.toLowerCase()) : true;
   }
 
 }
