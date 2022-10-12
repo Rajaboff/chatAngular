@@ -9,6 +9,6 @@
   </div>
 
   <app-message *ngFor="let message of messages | async"
-  [message]="message"
+  [message]="message" [room]="room"
   ></app-message>
 </div>

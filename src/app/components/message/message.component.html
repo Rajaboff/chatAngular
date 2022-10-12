@@ -1,6 +1,13 @@
-<div class="message-block" [class]="message?.type">
-  {{ message?.content }}
-  <p class="message-block__time">
-    {{ message?.time }}
-  </p>
+<div class="message" [class]="message?.type">
+  <app-image-mask [size]="40"
+  [color]="message?.type && message?.type === 'user' ? roomColor : 'gray'"
+  [initials]="(message?.type && message?.type === 'user' ? roomTitle : 'M R') | initial"
+  ></app-image-mask>
+
+  <div class="message-block">
+    {{ message?.content }}
+    <p class="message-block__time">
+      {{ message?.time }}
+    </p>
+  </div>
 </div>

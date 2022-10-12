@@ -1,7 +1,6 @@
 @import "../../utils/colors.scss";
 
 .message-block {
-  display: flex;
   position: relative;
   max-width: 40%;
   min-width: 0;
@@ -11,21 +10,32 @@
   font-size: 14px;
   color: white;
 
-  &.own {
-    float: right;
-    background-color: $primary-color;
-  }
-
-  &.user {
-    float: left;
-    background-color: $dark-200;
-  }
-
   &__time {
     position: absolute;
     bottom: 6px;
     right: 20px;
     opacity: 0.5;
     font-size: 10px;
+  }
+}
+
+.message {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+
+  &.own {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    > .message-block {
+      background-color: $primary-color;
+    }
+  }
+
+  &.user {
+    float: left;
+    > .message-block {
+      background-color: $dark-200;
+    }
   }
 }
