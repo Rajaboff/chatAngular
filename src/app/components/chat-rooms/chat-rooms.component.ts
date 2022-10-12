@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { IRoom } from 'src/app/interfaces/chat.interface';
 import { ChatService } from 'src/app/services/chat/chat.service';
 import { RoomService } from 'src/app/services/chat/room.service';

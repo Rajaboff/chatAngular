@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMessage, IRoom } from 'src/app/interfaces/chat.interface';
+import { IRoom } from 'src/app/interfaces/chat.interface';
 
 @Component({
   selector: 'app-room',

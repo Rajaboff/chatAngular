@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, ReplaySubject, Subject } from 'rxjs';
 import { IRoom } from 'src/app/interfaces/chat.interface';
-import { URL } from 'src/app/utils/env';
 
 @Injectable({
   providedIn: 'root'
