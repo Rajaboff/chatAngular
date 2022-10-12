@@ -10,6 +10,7 @@ export class ImageMaskComponent implements OnInit {
   @Input() size: number = 54;
   @Input() radius: number = 999;
   @Input() initials: string = "AA";
+  @Input() color: string = "gray";
 
   constructor() { }
 

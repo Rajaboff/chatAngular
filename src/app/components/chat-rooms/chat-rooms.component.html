@@ -1,7 +1,12 @@
 <div class="chat-rooms-block">
-  <app-room *ngFor="let room of roomList | async"
-  [initials]="room.room" [room]="room"
-  (click)="selectRoom(room)"
-  [active]="activeRoom?.uid === room.uid"
-  ></app-room>
+  <app-search (searching)="searchingValue = $event" ></app-search>
+  <div *ngFor="let room of roomList | async">
+    <app-room
+      [initials]="room.room" [room]="room"
+      (click)="selectRoom(room)"
+      [active]="activeRoom?.uid === room.uid"
+      *ngIf="roomIsSerching(room.room)"
+    ></app-room>
+  </div>
+
 </div>

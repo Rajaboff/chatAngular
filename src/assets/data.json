@@ -3,6 +3,7 @@
         "uid": "room_1",
         "room": "User 1",
         "avatar": "default",
+        "color": "#E9B15D",
         "messages": [
             {
                 "id": "msg1",
@@ -28,6 +29,7 @@
         "uid": "room_2",
         "room": "User 2",
         "avatar": "default",
+        "color": "#9864D9",
         "messages": [
             {
                 "id": "msg1",
@@ -65,6 +67,7 @@
         "uid": "room_3",
         "room": "User 3",
         "avatar": "default",
+        "color": "#486AE2",
         "messages": [
             {
                 "id": "msg1",
@@ -78,6 +81,7 @@
         "uid": "room_4",
         "room": "User 4",
         "avatar": "default",
+        "color": "#61C16B",
         "messages": [
             {
                 "id": "msg1",

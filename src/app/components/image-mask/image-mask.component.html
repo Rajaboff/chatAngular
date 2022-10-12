@@ -2,7 +2,8 @@
 [ngStyle]="{
   'width.px': size,
   'height.px': size,
-  'border-radius.px': radius
+  'border-radius.px': radius,
+  'backgroundColor': color
 }">
-  <h1 class="initials">{{ initials }}</h1>
+  <h1 class="initials" [style.fontSize.px]="size / 3">{{ initials }}</h1>
 </div>

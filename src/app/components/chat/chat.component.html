@@ -1,3 +1,14 @@
 <div class="chat-block">
-  <app-message *ngFor="let message of messages | async"></app-message>
+  <div class="chat-block__info" *ngIf="room">
+    <app-image-mask [size]="40" [color]="roomColor"
+    [initials]="roomTitle | initial"></app-image-mask>
+    <div>
+      <h1>{{ roomTitle }}</h1>
+      <p>Был(а) недавно в сети</p>
+    </div>
+  </div>
+
+  <app-message *ngFor="let message of messages | async"
+  [message]="message"
+  ></app-message>
 </div>

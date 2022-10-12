@@ -19,6 +19,8 @@ import { StoreModule } from '@ngrx/store';
 import { RoomComponent } from './components/room/room.component';
 import { InitialPipe } from './pipes/initial.pipe';
 import { MessageComponent } from './components/message/message.component';
+import { SearchComponent } from './components/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { MessageComponent } from './components/message/message.component';
     RoomComponent,
     InitialPipe,
     MessageComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { MessageComponent } from './components/message/message.component';
     DragDropModule,
     MatSlideToggleModule,
     StoreModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMessage, IRoom } from 'src/app/interfaces/chat';
+import { IMessage, IRoom } from 'src/app/interfaces/chat.interface';
 
 @Component({
   selector: 'app-room',
@@ -23,5 +23,9 @@ export class RoomComponent implements OnInit {
 
   get roomTitle(): string {
     return this.room?.room || "";
+  }
+
+  get color(): string {
+    return this.room?.color || "gray";
   }
 }

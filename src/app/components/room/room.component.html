@@ -1,5 +1,8 @@
 <div class="room-block" [ngClass]="{'active': active}">
-  <app-image-mask [size]="50" [initials]="roomTitle | initial"></app-image-mask>
+  <app-image-mask
+  [size]="50" [color]="color"
+  [initials]="roomTitle | initial">
+  </app-image-mask>
 
   <div class="room-block__info">
     <h1>{{ roomTitle }}</h1>

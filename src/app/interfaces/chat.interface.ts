@@ -2,7 +2,8 @@ export interface IRoom {
   uid: string;
   room: string;
   avatar: string;
-  messages: IMessage[]
+  messages: IMessage[];
+  color: string;
 }
 
 export interface IMessage {

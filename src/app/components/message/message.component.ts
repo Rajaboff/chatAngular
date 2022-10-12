@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IMessage } from 'src/app/interfaces/chat.interface';
 
 @Component({
   selector: 'app-message',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit {
+
+  @Input() message: IMessage | undefined;
 
   constructor() { }
 
